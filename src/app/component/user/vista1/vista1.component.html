@@ -1,0 +1,17 @@
+<clr-datagrid>
+    <clr-dg-column [clrDgField]="'id'">User ID</clr-dg-column>
+    <clr-dg-column [clrDgField]="'marca'">Marca</clr-dg-column>
+    <clr-dg-column [clrDgField]="'modelo'">Modelo</clr-dg-column>
+    <clr-dg-column [clrDgField]="'precio'">Precio</clr-dg-column>
+    <clr-dg-column [clrDgField]="'imagen'">Imagen</clr-dg-column>
+  
+    <clr-dg-row *clrDgItems="let user of vehiculos">
+      <clr-dg-cell>{{user.id}}</clr-dg-cell>
+      <clr-dg-cell>{{user.marca}}</clr-dg-cell>
+      <clr-dg-cell>{{user.modelo}}</clr-dg-cell>
+      <clr-dg-cell>{{user.precio}}</clr-dg-cell>
+      <clr-dg-cell>{{user.imagen}}</clr-dg-cell>
+    </clr-dg-row>
+  
+    <clr-dg-footer>{{vehiculos.length}} users</clr-dg-footer>
+  </clr-datagrid>
